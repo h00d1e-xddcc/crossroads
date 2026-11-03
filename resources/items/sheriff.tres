@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="crossroads_item" format=3 uid="uid://dknht4jsxxp48"]
+
+[ext_resource type="Script" uid="uid://d1k3vfjk4rmcv" path="res://code/item.gd" id="1_llgpm"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="2_e80ok"]
+
+[resource]
+resource_name = "sheriff"
+script = ExtResource("1_llgpm")
+texture = ExtResource("2_e80ok")
+rect = Rect2(2016, 1954, 32, 32)
+type = 1
+nbt = {
+"bullets": 0,
+"cooldown": 0.057,
+"damage": 1.0,
+"lifetime": 4.2,
+"mbullets": 7,
+"per_bullet": true,
+"reload": 0.35,
+"shot": 1,
+"speed": 400,
+"spread": 0.21,
+"value": 1400
+}
+metadata/_custom_type_script = "uid://d1k3vfjk4rmcv"

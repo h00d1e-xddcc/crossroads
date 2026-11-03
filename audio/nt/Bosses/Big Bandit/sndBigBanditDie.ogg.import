@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://mfwpv4comc40"
+path="res://.godot/imported/sndBigBanditDie.ogg-c51c07034b2e73bd241e5bff9e6f7dac.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Big Bandit/sndBigBanditDie.ogg"
+dest_files=["res://.godot/imported/sndBigBanditDie.ogg-c51c07034b2e73bd241e5bff9e6f7dac.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

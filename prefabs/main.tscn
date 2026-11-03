@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bgplo4a3agvio"]
+
+[ext_resource type="PackedScene" uid="uid://csgrc5lgmn2ye" path="res://prefabs/maps/house.tscn" id="1_jflnv"]
+[ext_resource type="PackedScene" uid="uid://c04klh14g400e" path="res://prefabs/entity/user.tscn" id="2_1jyap"]
+[ext_resource type="PackedScene" uid="uid://cap3jyc0myv7e" path="res://prefabs/ui/canvas.tscn" id="3_4sl7s"]
+[ext_resource type="Script" uid="uid://d1k3vfjk4rmcv" path="res://code/item.gd" id="3_b26oi"]
+[ext_resource type="Resource" uid="uid://bpiuhjpx1n4kh" path="res://resources/items/1911.tres" id="4_b26oi"]
+[ext_resource type="PackedScene" uid="uid://85bud7dflk6k" path="res://prefabs/entity/zombie.tscn" id="6_c70ge"]
+
+[node name="main" type="Node2D" unique_id=1024907961]
+
+[node name="map" parent="." unique_id=1033113204 instance=ExtResource("1_jflnv")]
+
+[node name="user" parent="." unique_id=2077381032 instance=ExtResource("2_1jyap")]
+collision_layer = 3
+collision_mask = 15
+move_speed = 170.0
+inventory = Array[ExtResource("3_b26oi")]([null, ExtResource("4_b26oi"), null, null, null, null])
+
+[node name="cam" parent="user" index="0" unique_id=1586713200]
+zoom = Vector2(2, 2)
+
+[node name="canvas" parent="." unique_id=1713167448 instance=ExtResource("3_4sl7s")]
+
+[node name="zombie" parent="." unique_id=1621277170 instance=ExtResource("6_c70ge")]
+position = Vector2(149, 0)
+
+[editable path="user"]

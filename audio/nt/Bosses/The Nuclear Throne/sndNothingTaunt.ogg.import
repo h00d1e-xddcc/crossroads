@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cvipqlrs7qv67"
+path="res://.godot/imported/sndNothingTaunt.ogg-bcdc8fc2a77d6d1e335ff9f8704f716d.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/The Nuclear Throne/sndNothingTaunt.ogg"
+dest_files=["res://.godot/imported/sndNothingTaunt.ogg-bcdc8fc2a77d6d1e335ff9f8704f716d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

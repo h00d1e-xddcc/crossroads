@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dmck1gualbqhi"
+path="res://.godot/imported/sndBigBallExplo.ogg-db4e544c9013158b044828502dca3b10.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/The Nuclear Throne/sndBigBallExplo.ogg"
+dest_files=["res://.godot/imported/sndBigBallExplo.ogg-db4e544c9013158b044828502dca3b10.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

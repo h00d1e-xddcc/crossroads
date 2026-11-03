@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bkl68mteisbb0"
+path="res://.godot/imported/sndSnowBotDead.ogg-847b946ae1970b8b15f9fd7292082816.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/Frozen City/sndSnowBotDead.ogg"
+dest_files=["res://.godot/imported/sndSnowBotDead.ogg-847b946ae1970b8b15f9fd7292082816.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

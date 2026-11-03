@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bunyfi7qaahyy"
+path="res://.godot/imported/sndLastDeath.ogg-40527039f28e6ad97ba294aba5ad1baf.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/IDPD Captain/sndLastDeath.ogg"
+dest_files=["res://.godot/imported/sndLastDeath.ogg-40527039f28e6ad97ba294aba5ad1baf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

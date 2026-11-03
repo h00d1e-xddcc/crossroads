@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://uc882pp06568"
+path="res://.godot/imported/sndBigDogIntro.ogg-3d9e3ef08c85115538dbfec00ba6a5ea.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Big Dog/sndBigDogIntro.ogg"
+dest_files=["res://.godot/imported/sndBigDogIntro.ogg-3d9e3ef08c85115538dbfec00ba6a5ea.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

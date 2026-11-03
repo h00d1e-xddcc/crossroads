@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dr1cpu03rs1c2"
+path="res://.godot/imported/sndBigBanditMelee.ogg-2feb9c87fecef78cc7e49eb28b003f8f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Big Bandit/sndBigBanditMelee.ogg"
+dest_files=["res://.godot/imported/sndBigBanditMelee.ogg-2feb9c87fecef78cc7e49eb28b003f8f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

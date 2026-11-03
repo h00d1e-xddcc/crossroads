@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://srsscwtdwy8m"]
+
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="1_niaei"]
+
+[node name="object" type="Node2D" unique_id=934858977]
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=294768]
+texture = ExtResource("1_niaei")
+region_enabled = true

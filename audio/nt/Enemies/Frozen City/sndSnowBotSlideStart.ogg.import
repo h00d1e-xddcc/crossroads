@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://guucb4bh7dst"
+path="res://.godot/imported/sndSnowBotSlideStart.ogg-3c3579f759efa6af3cd0f7bd4beb03ed.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/Frozen City/sndSnowBotSlideStart.ogg"
+dest_files=["res://.godot/imported/sndSnowBotSlideStart.ogg-3c3579f759efa6af3cd0f7bd4beb03ed.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

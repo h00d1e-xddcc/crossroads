@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dgutfour5ypby"
+path="res://.godot/imported/sndBigBanditHit.ogg-c1b22a3a93d0f6047f6fa661d5ab776f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Big Bandit/sndBigBanditHit.ogg"
+dest_files=["res://.godot/imported/sndBigBanditHit.ogg-c1b22a3a93d0f6047f6fa661d5ab776f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

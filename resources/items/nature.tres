@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="crossroads_item" format=3 uid="uid://diiugrpxiy850"]
+
+[ext_resource type="Script" uid="uid://d1k3vfjk4rmcv" path="res://code/item.gd" id="1_b5abr"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="2_der0w"]
+
+[resource]
+resource_name = "nature"
+script = ExtResource("1_b5abr")
+texture = ExtResource("2_der0w")
+rect = Rect2(1920, 1890, 64, 32)
+type = 2
+nbt = {
+"bullets": 0,
+"cooldown": 0.057,
+"damage": 0.4,
+"item": null,
+"lifetime": 4.2,
+"mbullets": 2,
+"per_bullet": false,
+"reload": 0.9,
+"shot": 8,
+"speed": 400,
+"spread": 0.68,
+"value": 1500
+}
+metadata/_custom_type_script = "uid://d1k3vfjk4rmcv"

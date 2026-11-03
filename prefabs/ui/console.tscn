@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bvarrof6opy4i"]
+
+[ext_resource type="Script" uid="uid://bi3llc0k4ucd" path="res://code/console.gd" id="1_f20xa"]
+[ext_resource type="FontFile" uid="uid://quv3rt6hskca" path="res://resources/PressStart2P.ttf" id="2_caq8l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hf5f4"]
+bg_color = Color(0, 0, 0, 0.3137255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwgcm"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_top = 2
+border_color = Color(0, 0, 0, 0.6)
+
+[node name="console" type="CanvasLayer" unique_id=424941536]
+script = ExtResource("1_f20xa")
+
+[node name="panel" type="Panel" parent="." unique_id=36756786]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+show_behind_parent = true
+z_index = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -27.0
+offset_top = 163.0
+offset_right = 415.0
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(40, -40)
+offset_transform_visual_only = false
+
+[node name="output" type="RichTextLabel" parent="panel" unique_id=1782590902]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/paragraph_separation = 8
+theme_override_fonts/normal_font = ExtResource("2_caq8l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hf5f4")
+bbcode_enabled = true
+text = " "
+scroll_following = true
+
+[node name="input" type="LineEdit" parent="panel" unique_id=1191321777]
+z_index = 257
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.999985
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 31.95)
+offset_transform_visual_only = false
+theme_override_fonts/font = ExtResource("2_caq8l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qwgcm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qwgcm")
+
+[node name="scroll" type="VScrollBar" parent="panel" unique_id=287374409]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="text_submitted" from="panel/input" to="." method="_on_input_text_submitted"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bcbbwvns4crdu"
+path="res://.godot/imported/sndCrownGuardianDead.ogg-2d267eb40c18846095eb6be4bc78ad08.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Crown Guardian/sndCrownGuardianDead.ogg"
+dest_files=["res://.godot/imported/sndCrownGuardianDead.ogg-2d267eb40c18846095eb6be4bc78ad08.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

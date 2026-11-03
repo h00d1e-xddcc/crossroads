@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://jgb8s0i13iev"
+path="res://.godot/imported/sndSnowTankDead.ogg-0900ca024b2ca0699804e94eedbce390.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/Frozen City/sndSnowTankDead.ogg"
+dest_files=["res://.godot/imported/sndSnowTankDead.ogg-0900ca024b2ca0699804e94eedbce390.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

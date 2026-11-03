@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dbuponqay1qnr"
+path="res://.godot/imported/sndBigDogWalk.ogg-d886e354848df96dd06a431a6d062646.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Big Dog/sndBigDogWalk.ogg"
+dest_files=["res://.godot/imported/sndBigDogWalk.ogg-d886e354848df96dd06a431a6d062646.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

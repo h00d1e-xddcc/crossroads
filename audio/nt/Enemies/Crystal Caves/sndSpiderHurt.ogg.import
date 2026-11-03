@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://2o2v22lw5iup"
+path="res://.godot/imported/sndSpiderHurt.ogg-fda6503e7ff9760ac51b9c2f115ed8a7.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/Crystal Caves/sndSpiderHurt.ogg"
+dest_files=["res://.godot/imported/sndSpiderHurt.ogg-fda6503e7ff9760ac51b9c2f115ed8a7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

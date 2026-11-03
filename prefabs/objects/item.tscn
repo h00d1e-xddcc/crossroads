@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://q8lg1kwtiihy"]
+
+[ext_resource type="Script" uid="uid://bqopnahrt4qfj" path="res://code/object.gd" id="1_jlp4h"]
+[ext_resource type="Resource" uid="uid://obo5mp2ug66i" path="res://resources/items/gas.tres" id="2_7kueh"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="3_6h0op"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mto5o"]
+size = Vector2(32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlp4h"]
+atlas = ExtResource("3_6h0op")
+
+[node name="item" type="CollisionShape2D" unique_id=415358823]
+shape = SubResource("RectangleShape2D_mto5o")
+script = ExtResource("1_jlp4h")
+object = 4
+nbt = {
+"item": ExtResource("2_7kueh")
+}
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=2080858334]
+texture = SubResource("AtlasTexture_jlp4h")
+region_enabled = true

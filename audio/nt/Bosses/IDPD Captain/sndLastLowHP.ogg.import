@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://l7qhefoca3e8"
+path="res://.godot/imported/sndLastLowHP.ogg-a9d3fabc0c801f34fa5dbdaf62c8843e.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/IDPD Captain/sndLastLowHP.ogg"
+dest_files=["res://.godot/imported/sndLastLowHP.ogg-a9d3fabc0c801f34fa5dbdaf62c8843e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

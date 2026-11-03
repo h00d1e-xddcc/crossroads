@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bhu12m18ti6ca"
+path="res://.godot/imported/sndLilHunterHurt.ogg-e37ec5924b04a012c94a41e9f5338cad.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Lil Hunter/sndLilHunterHurt.ogg"
+dest_files=["res://.godot/imported/sndLilHunterHurt.ogg-e37ec5924b04a012c94a41e9f5338cad.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

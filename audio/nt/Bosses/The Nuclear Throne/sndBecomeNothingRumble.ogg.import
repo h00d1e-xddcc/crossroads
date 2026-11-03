@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://brlloykspm4em"
+path="res://.godot/imported/sndBecomeNothingRumble.ogg-b8e9c2eff78d43f66ab6c5fcaf8b116a.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/The Nuclear Throne/sndBecomeNothingRumble.ogg"
+dest_files=["res://.godot/imported/sndBecomeNothingRumble.ogg-b8e9c2eff78d43f66ab6c5fcaf8b116a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

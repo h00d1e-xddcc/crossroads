@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://85bud7dflk6k"]
+
+[ext_resource type="Script" uid="uid://bit3ojcrxw7wx" path="res://code/entity.gd" id="1_gan8t"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="2_swugl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vcn1"]
+size = Vector2(27, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vcn1"]
+atlas = ExtResource("2_swugl")
+
+[node name="zombie" type="Area2D" unique_id=1621277170]
+collision_layer = 15
+collision_mask = 15
+script = ExtResource("1_gan8t")
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=203411466]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_0vcn1")
+
+[node name="zombie" type="Sprite2D" parent="." unique_id=889724783]
+texture = SubResource("AtlasTexture_0vcn1")
+region_enabled = true
+region_rect = Rect2(736, 2016, 32, 32)

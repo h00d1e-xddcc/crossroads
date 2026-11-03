@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://svp377mugwd2"
+path="res://.godot/imported/sndSnowBotPickup.ogg-e64be3ee51d5cde1484d11d5a7f92b5c.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/Frozen City/sndSnowBotPickup.ogg"
+dest_files=["res://.godot/imported/sndSnowBotPickup.ogg-e64be3ee51d5cde1484d11d5a7f92b5c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

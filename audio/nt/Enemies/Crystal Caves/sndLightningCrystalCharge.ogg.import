@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://rqdt4ryg0yc5"
+path="res://.godot/imported/sndLightningCrystalCharge.ogg-dea6ba50f44cd6285efecf5b9a7c509e.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/Crystal Caves/sndLightningCrystalCharge.ogg"
+dest_files=["res://.godot/imported/sndLightningCrystalCharge.ogg-dea6ba50f44cd6285efecf5b9a7c509e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

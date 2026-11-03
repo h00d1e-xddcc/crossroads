@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="crossroads_item" format=3 uid="uid://bpiuhjpx1n4kh"]
+
+[ext_resource type="Script" uid="uid://d1k3vfjk4rmcv" path="res://code/item.gd" id="1_nlos7"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="2_6atw3"]
+
+[resource]
+resource_name = "1911"
+script = ExtResource("1_nlos7")
+texture = ExtResource("2_6atw3")
+rect = Rect2(2016, 2016, 32, 32)
+type = 1
+nbt = {
+"bullets": 0,
+"cooldown": 0.21,
+"damage": 1.3,
+"lifetime": 4.2,
+"mbullets": 8,
+"per_bullet": false,
+"reload": 2.6,
+"shot": 1,
+"speed": 400,
+"spread": 0.03,
+"value": 0
+}
+metadata/_custom_type_script = "uid://d1k3vfjk4rmcv"

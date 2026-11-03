@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://buyilo54gk2qo"
+path="res://.godot/imported/sndGoldTankDead.ogg-160393cc79b325bc02eb62d3471af21c.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/Frozen City/sndGoldTankDead.ogg"
+dest_files=["res://.godot/imported/sndGoldTankDead.ogg-160393cc79b325bc02eb62d3471af21c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

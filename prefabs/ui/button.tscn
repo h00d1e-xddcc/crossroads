@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://2dl61jmg48d5"]
+
+[ext_resource type="Theme" uid="uid://gaiaubb50xqw" path="res://resources/theme.tres" id="1_w854o"]
+[ext_resource type="Script" uid="uid://ur08culqvm1o" path="res://code/trans.gd" id="2_osgl7"]
+[ext_resource type="Script" uid="uid://b7pmaswmqf6he" path="res://code/button.gd" id="2_y83pj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3hcy"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="Theme" id="Theme_uv0is"]
+
+[node name="button" type="LineEdit" unique_id=1575315374 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(94, 35)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -17.5
+offset_right = 47.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_w854o")
+alignment = 1
+script = ExtResource("2_y83pj")
+label = NodePath("label")
+
+[node name="label" type="Label" parent="." unique_id=1415292755]
+layout_mode = 0
+offset_left = -137.0
+offset_right = -4.0
+offset_bottom = 35.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_j3hcy")
+text = "audio %"
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("2_osgl7")
+
+[node name="reset" type="Button" parent="." unique_id=1272373802]
+layout_mode = 0
+offset_left = 97.0
+offset_right = 133.0
+offset_bottom = 35.0
+theme = SubResource("Theme_uv0is")
+text = "X"
+
+[connection signal="text_submitted" from="." to="." method="_on_text_submitted"]
+[connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cvhwjco73s2r8"
+path="res://.godot/imported/sndHyperCrystalChargeExplo.ogg-9af8b4da55b4e236a44bfb47f9f1180f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Hyper Crystal/sndHyperCrystalChargeExplo.ogg"
+dest_files=["res://.godot/imported/sndHyperCrystalChargeExplo.ogg-9af8b4da55b4e236a44bfb47f9f1180f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

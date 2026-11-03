@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b7400x4sesuwd"
+path="res://.godot/imported/sndHyperCrystalTaunt.ogg-6dcd4edf72663695dd609c526354dae5.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Hyper Crystal/sndHyperCrystalTaunt.ogg"
+dest_files=["res://.godot/imported/sndHyperCrystalTaunt.ogg-6dcd4edf72663695dd609c526354dae5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

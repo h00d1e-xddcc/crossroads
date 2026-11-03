@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dsw6vwwl3ip6i"
+path="res://.godot/imported/Kevin MacLeod - The Descent.ogg-7113463ff80a78f98fdd13fc512633d4.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/amb/Kevin MacLeod - The Descent.ogg"
+dest_files=["res://.godot/imported/Kevin MacLeod - The Descent.ogg-7113463ff80a78f98fdd13fc512633d4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

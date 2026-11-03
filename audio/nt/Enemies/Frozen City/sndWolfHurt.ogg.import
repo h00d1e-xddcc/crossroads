@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c2xnwox3f54pe"
+path="res://.godot/imported/sndWolfHurt.ogg-389040f86ca172ccd9a61b022580e8be.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/Frozen City/sndWolfHurt.ogg"
+dest_files=["res://.godot/imported/sndWolfHurt.ogg-389040f86ca172ccd9a61b022580e8be.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

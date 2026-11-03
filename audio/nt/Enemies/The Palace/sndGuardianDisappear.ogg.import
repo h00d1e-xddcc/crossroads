@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://0p2ld1t6d52j"
+path="res://.godot/imported/sndGuardianDisappear.ogg-a778917fb9f0b93990dbe76cfdc09ab5.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/The Palace/sndGuardianDisappear.ogg"
+dest_files=["res://.godot/imported/sndGuardianDisappear.ogg-a778917fb9f0b93990dbe76cfdc09ab5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

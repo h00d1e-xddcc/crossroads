@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cbc074ckn8b01"
+path="res://.godot/imported/sndGoldTankShoot.ogg-85530dd337f377afba3f2df6cd2073f4.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/Frozen City/sndGoldTankShoot.ogg"
+dest_files=["res://.godot/imported/sndGoldTankShoot.ogg-85530dd337f377afba3f2df6cd2073f4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

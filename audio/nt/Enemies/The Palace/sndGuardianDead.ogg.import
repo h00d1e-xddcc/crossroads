@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c3d4c61xx1mr3"
+path="res://.godot/imported/sndGuardianDead.ogg-9fb91281da07f74b933a07e2a3a581fd.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/The Palace/sndGuardianDead.ogg"
+dest_files=["res://.godot/imported/sndGuardianDead.ogg-9fb91281da07f74b933a07e2a3a581fd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://db6qody81irht"
+path="res://.godot/imported/sndLilHunterDeath.ogg-853a3c0d08901c9f3bfa3af50f88a180.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Lil Hunter/sndLilHunterDeath.ogg"
+dest_files=["res://.godot/imported/sndLilHunterDeath.ogg-853a3c0d08901c9f3bfa3af50f88a180.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

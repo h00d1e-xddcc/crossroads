@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://clv3peyptr11h"
+path="res://.godot/imported/sndNothingBeamEnd.ogg-68134116050cbf8dfa32cb5653a865e3.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/The Nuclear Throne/sndNothingBeamEnd.ogg"
+dest_files=["res://.godot/imported/sndNothingBeamEnd.ogg-68134116050cbf8dfa32cb5653a865e3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

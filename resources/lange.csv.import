@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bicf7ihjwpik7"
+
+[deps]
+
+files=["res://resources/lange.english.translation", "res://resources/lange.engliw.translation", "res://resources/lange.wussian.translation", "res://resources/lange.russian.translation"]
+
+source_file="res://resources/lange.csv"
+dest_files=["res://resources/lange.english.translation", "res://resources/lange.engliw.translation", "res://resources/lange.wussian.translation", "res://resources/lange.russian.translation"]
+
+[params]
+
+compress=true
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bhq4v1n4i3rrd"
+path="res://.godot/imported/sndSnowBotHurt.ogg-7ed45c401db4a2e3ebd0a53fc1e167d0.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/Frozen City/sndSnowBotHurt.ogg"
+dest_files=["res://.godot/imported/sndSnowBotHurt.ogg-7ed45c401db4a2e3ebd0a53fc1e167d0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

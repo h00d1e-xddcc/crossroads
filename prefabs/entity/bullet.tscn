@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d17khcvk7s0as"]
+
+[ext_resource type="Script" uid="uid://dsht5omt2h7va" path="res://code/projectile.gd" id="1_foied"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="1_ja1j7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vcn1"]
+atlas = ExtResource("1_ja1j7")
+region = Rect2(1216, 1826, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mto5o"]
+size = Vector2(8, 8)
+
+[node name="bullet" type="Area2D" unique_id=1406799166]
+collision_layer = 15
+collision_mask = 15
+script = ExtResource("1_foied")
+speed = 1.0
+lifetime = 8.0
+type = 1
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=1942869293]
+texture = SubResource("AtlasTexture_0vcn1")
+
+[node name="collider" type="CollisionShape2D" parent="." unique_id=2132048199]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_mto5o")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

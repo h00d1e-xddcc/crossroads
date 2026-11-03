@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqp0w6gkge33d"
+path="res://.godot/imported/sndNothing2Beam.ogg-b4d3d2e2ef724839ae37c73380e4db4e.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Throne II/sndNothing2Beam.ogg"
+dest_files=["res://.godot/imported/sndNothing2Beam.ogg-b4d3d2e2ef724839ae37c73380e4db4e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

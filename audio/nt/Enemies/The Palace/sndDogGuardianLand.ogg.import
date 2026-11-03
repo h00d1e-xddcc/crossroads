@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://wc3osi7h5l1w"
+path="res://.godot/imported/sndDogGuardianLand.ogg-78504a22aa2ee85cbe1f121efbc61b1e.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/The Palace/sndDogGuardianLand.ogg"
+dest_files=["res://.godot/imported/sndDogGuardianLand.ogg-78504a22aa2ee85cbe1f121efbc61b1e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

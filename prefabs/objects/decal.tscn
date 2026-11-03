@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://sn7rkhxq80pb"]
+
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="3_6bcjn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlp4h"]
+atlas = ExtResource("3_6bcjn")
+region = Rect2(0, 0, 2048, 2048)
+
+[node name="sprite" type="Sprite2D" unique_id=2080858334]
+z_index = -1
+texture = SubResource("AtlasTexture_jlp4h")
+region_enabled = true
+region_rect = Rect2(1791, 1939, 6, 4)

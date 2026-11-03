@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://drsi2d0pd64ol"]
+
+[ext_resource type="Script" uid="uid://ceumk0ye14fm7" path="res://code/ui_inventory_button.gd" id="1_i1jn0"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="2_i1jn0"]
+[ext_resource type="FontFile" uid="uid://quv3rt6hskca" path="res://resources/PressStart2P.ttf" id="3_o82p2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1jn0"]
+atlas = ExtResource("2_i1jn0")
+region = Rect2(1077, 11, 32, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0vcn1"]
+font = ExtResource("3_o82p2")
+
+[node name="slot" type="Button" unique_id=1293918157 node_paths=PackedStringArray("texture", "input")]
+custom_minimum_size = Vector2(64, 64)
+script = ExtResource("1_i1jn0")
+texture = NodePath("texture")
+input = NodePath("Label")
+
+[node name="texture" type="TextureRect" parent="." unique_id=114373890]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_i1jn0")
+
+[node name="Label" type="Label" parent="." unique_id=44970873]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(-3, -3)
+offset_transform_visual_only = false
+text = "Q"
+label_settings = SubResource("LabelSettings_0vcn1")
+horizontal_alignment = 2
+vertical_alignment = 2

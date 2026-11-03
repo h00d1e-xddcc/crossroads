@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ch0nc5i8qfu3"
+path="res://.godot/imported/sndLastGrowl.ogg-be4cc1d5582d857d06061291312d10cd.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/IDPD Captain/sndLastGrowl.ogg"
+dest_files=["res://.godot/imported/sndLastGrowl.ogg-be4cc1d5582d857d06061291312d10cd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

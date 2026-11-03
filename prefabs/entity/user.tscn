@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://c04klh14g400e"]
+
+[ext_resource type="Script" uid="uid://o4wxgexl8wu6" path="res://code/user.gd" id="1_qhsqr"]
+[ext_resource type="Texture2D" uid="uid://2fyaap80i34b" path="res://pics/Skins/0.png" id="2_dyapr"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="3_ilacu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 15.0
+
+[sub_resource type="Gradient" id="Gradient_qhsqr"]
+offsets = PackedFloat32Array(0.15418503, 0.92511016)
+colors = PackedColorArray(1, 1, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dyapr"]
+gradient = SubResource("Gradient_qhsqr")
+width = 200
+height = 200
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mto5o"]
+radius = 35.0
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_37ytt"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath(".:scale")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+
+[node name="user_blank" type="CharacterBody2D" unique_id=2077381032 node_paths=PackedStringArray("light", "area", "fire")]
+script = ExtResource("1_qhsqr")
+light = NodePath("fire/light")
+area = NodePath("ShapeCast2D")
+fire = NodePath("fire")
+
+[node name="cam" type="Camera2D" parent="." unique_id=1586713200]
+
+[node name="collider" type="CollisionShape2D" parent="." unique_id=1046819919]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="body" type="Sprite2D" parent="." unique_id=1693668447]
+visibility_layer = 2
+texture_filter = 1
+texture = ExtResource("2_dyapr")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="arm" type="Sprite2D" parent="." unique_id=1207925035]
+visibility_layer = 2
+position = Vector2(21.333334, -1.3333334)
+texture = ExtResource("3_ilacu")
+region_enabled = true
+region_rect = Rect2(1184, 2016, 32, 32)
+
+[node name="fire" type="Node2D" parent="." unique_id=922590619]
+position = Vector2(21, 0)
+
+[node name="light" type="PointLight2D" parent="fire" unique_id=166477030]
+visible = false
+scale = Vector2(0.25, 0.25)
+color = Color(0.6052743, 0.6052743, 0.6052743, 1)
+texture = SubResource("GradientTexture2D_dyapr")
+texture_scale = 6.47
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=2046312302]
+visible = false
+shape = SubResource("CircleShape2D_mto5o")
+target_position = Vector2(0, 0)
+collision_mask = 15
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=311243163]
+replication_config = SubResource("SceneReplicationConfig_37ytt")

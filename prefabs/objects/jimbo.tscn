@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://crga3u3qqh0po"]
+
+[ext_resource type="Script" uid="uid://bqopnahrt4qfj" path="res://code/object.gd" id="1_vxrok"]
+[ext_resource type="Resource" uid="uid://bpiuhjpx1n4kh" path="res://resources/items/1911.tres" id="2_vxrok"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="3_uk0di"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yprbh"]
+size = Vector2(64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aebjg"]
+atlas = ExtResource("3_uk0di")
+
+[node name="jimbo" type="CollisionShape2D" unique_id=807668424]
+shape = SubResource("RectangleShape2D_yprbh")
+script = ExtResource("1_vxrok")
+object = 5
+nbt = {
+"item": ExtResource("2_vxrok"),
+"points": 100
+}
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=2014314217]
+position = Vector2(0, -3)
+texture = ExtResource("3_uk0di")
+region_enabled = true
+region_rect = Rect2(1760, 122, 64, 38)
+
+[node name="weapon" type="Sprite2D" parent="." unique_id=1511870199]
+position = Vector2(0.49999905, 2)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_aebjg")
+region_enabled = true

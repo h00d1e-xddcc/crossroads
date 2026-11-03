@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dd8dev5yu5fuu"
+path="res://.godot/imported/sndLaserCrystalHit.ogg-2184f9c89a452b349ab78d6067efdf3b.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/Crystal Caves/sndLaserCrystalHit.ogg"
+dest_files=["res://.godot/imported/sndLaserCrystalHit.ogg-2184f9c89a452b349ab78d6067efdf3b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

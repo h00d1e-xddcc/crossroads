@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bvvmtyad3vnjd"
+path="res://.godot/imported/sndNothingFootstep.ogg-d5a9742cce179dc7ab4e9c059dfb8376.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/The Nuclear Throne/sndNothingFootstep.ogg"
+dest_files=["res://.godot/imported/sndNothingFootstep.ogg-d5a9742cce179dc7ab4e9c059dfb8376.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

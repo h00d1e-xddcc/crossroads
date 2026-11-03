@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqjpl7vcyprgo"
+path="res://.godot/imported/sndGuardianFire.ogg-6c08389b273475c8c5c64f9abc0420f9.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/The Palace/sndGuardianFire.ogg"
+dest_files=["res://.godot/imported/sndGuardianFire.ogg-6c08389b273475c8c5c64f9abc0420f9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

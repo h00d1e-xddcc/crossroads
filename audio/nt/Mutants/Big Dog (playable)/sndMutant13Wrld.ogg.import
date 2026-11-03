@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://yhf7gu8qjn7o"
+path="res://.godot/imported/sndMutant13Wrld.ogg-728794ca1674571f86ae44b2e2cd288d.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Mutants/Big Dog (playable)/sndMutant13Wrld.ogg"
+dest_files=["res://.godot/imported/sndMutant13Wrld.ogg-728794ca1674571f86ae44b2e2cd288d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

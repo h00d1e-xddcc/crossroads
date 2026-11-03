@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bs1ogtsvnvp1x"
+path="res://.godot/imported/sndCrownGuardianAppear.ogg-0afc34504699fecd37dbb0c63a2d8e38.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Crown Guardian/sndCrownGuardianAppear.ogg"
+dest_files=["res://.godot/imported/sndCrownGuardianAppear.ogg-0afc34504699fecd37dbb0c63a2d8e38.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

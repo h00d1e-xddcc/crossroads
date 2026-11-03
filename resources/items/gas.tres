@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="crossroads_item" format=3 uid="uid://obo5mp2ug66i"]
+
+[ext_resource type="Script" uid="uid://d1k3vfjk4rmcv" path="res://code/item.gd" id="1_758fb"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="2_ekqju"]
+
+[resource]
+resource_name = "gas"
+script = ExtResource("1_758fb")
+texture = ExtResource("2_ekqju")
+rect = Rect2(1696, 1920, 32, 32)
+type = 7
+nbt = {
+"item": null
+}
+metadata/_custom_type_script = "uid://d1k3vfjk4rmcv"

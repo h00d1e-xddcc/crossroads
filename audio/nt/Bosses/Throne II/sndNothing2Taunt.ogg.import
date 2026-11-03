@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqxjigv0p2xx1"
+path="res://.godot/imported/sndNothing2Taunt.ogg-f7e2f0143b313d1096075aeacb32e0cb.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Throne II/sndNothing2Taunt.ogg"
+dest_files=["res://.godot/imported/sndNothing2Taunt.ogg-f7e2f0143b313d1096075aeacb32e0cb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

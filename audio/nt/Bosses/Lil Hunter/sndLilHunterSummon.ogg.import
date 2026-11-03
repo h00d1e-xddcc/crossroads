@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://qr5sremhpoub"
+path="res://.godot/imported/sndLilHunterSummon.ogg-44f2b30f9cc5ae65207debc176096f8f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Bosses/Lil Hunter/sndLilHunterSummon.ogg"
+dest_files=["res://.godot/imported/sndLilHunterSummon.ogg-44f2b30f9cc5ae65207debc176096f8f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

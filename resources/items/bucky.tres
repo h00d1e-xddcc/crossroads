@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="crossroads_item" format=3 uid="uid://cs34etqn70quj"]
+
+[ext_resource type="Script" uid="uid://d1k3vfjk4rmcv" path="res://code/item.gd" id="1_rvqac"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="2_acuup"]
+
+[resource]
+resource_name = "bucky"
+script = ExtResource("1_rvqac")
+texture = ExtResource("2_acuup")
+rect = Rect2(1920, 1954, 64, 32)
+type = 2
+nbt = {
+"bullets": 0,
+"cooldown": 1.1,
+"damage": 1.7,
+"lifetime": 4.2,
+"mbullets": 5,
+"per_bullet": true,
+"reload": 0.6,
+"shot": 6,
+"speed": 400,
+"spread": 0.25,
+"value": 1650
+}
+metadata/_custom_type_script = "uid://d1k3vfjk4rmcv"

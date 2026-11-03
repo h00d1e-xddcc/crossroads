@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://w5xoxqxq7ija"
+path="res://.godot/imported/sndExploGuardianHurt.ogg-3c70531272812342a2196a9cb0169c0d.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nt/Enemies/The Palace/sndExploGuardianHurt.ogg"
+dest_files=["res://.godot/imported/sndExploGuardianHurt.ogg-3c70531272812342a2196a9cb0169c0d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

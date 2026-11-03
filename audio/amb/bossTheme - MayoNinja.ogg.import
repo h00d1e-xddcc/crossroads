@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bniu1u1ygq1k3"
+path="res://.godot/imported/bossTheme - MayoNinja.ogg-3deded0b994824d19a39ad5a43d9ae2f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/amb/bossTheme - MayoNinja.ogg"
+dest_files=["res://.godot/imported/bossTheme - MayoNinja.ogg-3deded0b994824d19a39ad5a43d9ae2f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
