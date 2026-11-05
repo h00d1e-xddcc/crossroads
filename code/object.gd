@@ -1,7 +1,7 @@
 extends CollisionShape2D
 class_name crossroads_object
 
-enum type_object {NONE, POINT, KEY, EXPLODE, ITEM, JIMBO}
+enum type_object {NONE, POINT, KEY, EXPLODE, ITEM, JIMBO, BUTTON}
 
 @export var object : type_object
 @export var nbt : Dictionary

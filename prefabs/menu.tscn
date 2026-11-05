@@ -395,6 +395,7 @@ layout_mode = 0
 offset_left = 17.0
 offset_right = 224.0
 offset_bottom = 55.0
+theme = ExtResource("7_kuqlr")
 text = "Original
 Zombie Cubes
 links"
@@ -524,9 +525,6 @@ translate = true
 [connection signal="text_submitted" from="main/vessel/name" to="." method="_on_name_text_submitted"]
 [connection signal="pressed" from="main/vessel/skin" to="." method="_on_skin"]
 [connection signal="pressed" from="main/buttons/array/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="label_og/buttons/facebook" to="." method="_open_link" binds= ["https://www.facebook.com/MayoNinjaGames"]]
-[connection signal="pressed" from="label_og/buttons/twitter" to="." method="_open_link" binds= ["https://x.com/MayoNinja_"]]
-[connection signal="pressed" from="label_og/buttons/steam" to="." method="_open_link" binds= ["https://store.steampowered.com/app/959030/Zombie_Cubes/"]]
 
 [editable path="connect/ip"]
 [editable path="connect/port"]

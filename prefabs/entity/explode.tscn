@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ydxa86ht6lp1"]
+
+[ext_resource type="Texture2D" uid="uid://c236bb1yv7x22" path="res://pics/misc/explode.png" id="1_3ktne"]
+[ext_resource type="Script" uid="uid://dqaqx248sr2j8" path="res://code/dynamic.gd" id="1_tgwex"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vcn1"]
+atlas = ExtResource("1_3ktne")
+
+[node name="sprite" type="Sprite2D" unique_id=889724783]
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_0vcn1")
+region_enabled = true
+region_rect = Rect2(64, 0, 64, 64)
+script = ExtResource("1_tgwex")

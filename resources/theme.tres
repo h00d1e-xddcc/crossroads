@@ -1,5 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://gaiaubb50xqw"]
 
+[ext_resource type="FontFile" uid="uid://quv3rt6hskca" path="res://resources/PressStart2P.ttf" id="1_d4nwg"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4nwg"]
 bg_color = Color(0.4862745, 0.4862745, 0.4862745, 1)
 
@@ -13,6 +15,7 @@ corner_detail = 5
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tekt2"]
 
 [resource]
+Button/fonts/font = ExtResource("1_d4nwg")
 Button/styles/focus = SubResource("StyleBoxFlat_d4nwg")
 Button/styles/hover = SubResource("StyleBoxFlat_7ct1h")
 Button/styles/normal = SubResource("StyleBoxFlat_jfis0")

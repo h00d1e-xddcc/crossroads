@@ -1,5 +1,5 @@
 extends Node2D
-class_name root
+class_name crossroads_root
 
 @onready var atlas : Texture = preload("res://pics/tiles.ase")
 @onready var user : crossroads_user
@@ -135,13 +135,11 @@ func decal_clear() :
 	decals_write = -1
 	arc.decals.resize(arc.settings.data["decal"])
 
-#func spawn()
-				#var summoning : String = str(comm.get(1))
-				#var loaded_entity = load("res://prefabs/entity/" + summoning + ".tscn")
-				#if loaded_entity != null :
-					#var entity = loaded_entity.instantiate()
-					#get_tree().root.add_child(entity)
-					#entity.position = arc.user.position
+func spawn(fl : Dictionary = {"summon" = "default",pos = Vector2.ZERO}) :
+	var loaded_entity = load("res://prefabs/entity/" + fl["summon"] + ".tscn").instantiate()
+	if loaded_entity != null :
+		loaded_entity.call_deferred("add_child", get_tree().root)
+		loaded_entity.set_deferred("global_position", fl["pos"])
 
 func console_print(data) : 
 	get_node("/root/ARC_CONSOLE").print_output(data)

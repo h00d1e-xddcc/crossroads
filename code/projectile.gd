@@ -26,9 +26,17 @@ func pof() :
 	var sprite = $sprite
 	sprite.texture = sprite.texture.duplicate()
 	sprite.texture.region = Rect2 (1216, 2017, 32, 32)
-	for i in range(5) :
-		await get_tree().create_timer(.12).timeout
-		sprite.texture.region.position.y -= 32
+	#for i in range(5) :
+	await get_tree().create_timer(.12).timeout
+	sprite.texture.region.position.y = 1985
+	await get_tree().create_timer(.12).timeout
+	sprite.texture.region.position.y = 1953
+	await get_tree().create_timer(.12).timeout
+	sprite.texture.region.position.y = 1921
+	await get_tree().create_timer(.12).timeout
+	sprite.texture.region.position.y = 1889
+	await get_tree().create_timer(.12).timeout
+	sprite.texture.region.position.y = 1857
 	queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
@@ -38,7 +46,9 @@ func _on_body_entered(body: Node2D) -> void:
 	if durability <= 0 : pof()
 
 func _on_area_entered(area: Area2D) -> void:
+	#print(area.name)
 	if area.has_method("take_damage"):
+		print(1)
 		area.take_damage(damage)
 		durability -= 1
 		if durability <= 0 : pof()

@@ -19,6 +19,7 @@ lifetime = 8.0
 type = 1
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=1942869293]
+z_index = 10
 texture = SubResource("AtlasTexture_0vcn1")
 
 [node name="collider" type="CollisionShape2D" parent="." unique_id=2132048199]

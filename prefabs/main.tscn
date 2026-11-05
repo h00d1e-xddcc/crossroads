@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://bgplo4a3agvio"]
 
-[ext_resource type="PackedScene" uid="uid://csgrc5lgmn2ye" path="res://prefabs/maps/house.tscn" id="1_jflnv"]
+[ext_resource type="PackedScene" uid="uid://bjh1rvtcsptpf" path="res://prefabs/maps/house_.tscn" id="1_b26oi"]
 [ext_resource type="PackedScene" uid="uid://c04klh14g400e" path="res://prefabs/entity/user.tscn" id="2_1jyap"]
 [ext_resource type="PackedScene" uid="uid://cap3jyc0myv7e" path="res://prefabs/ui/canvas.tscn" id="3_4sl7s"]
 [ext_resource type="Script" uid="uid://d1k3vfjk4rmcv" path="res://code/item.gd" id="3_b26oi"]
 [ext_resource type="Resource" uid="uid://bpiuhjpx1n4kh" path="res://resources/items/1911.tres" id="4_b26oi"]
-[ext_resource type="PackedScene" uid="uid://85bud7dflk6k" path="res://prefabs/entity/zombie.tscn" id="6_c70ge"]
+[ext_resource type="PackedScene" uid="uid://dghu7utf6hok1" path="res://prefabs/entity/kamikadze.tscn" id="6_c70ge"]
+[ext_resource type="PackedScene" uid="uid://cam7l4e2uowio" path="res://prefabs/entity/wall.tscn" id="7_1dwcq"]
 
 [node name="main" type="Node2D" unique_id=1024907961]
 
-[node name="map" parent="." unique_id=1033113204 instance=ExtResource("1_jflnv")]
+[node name="map" parent="." unique_id=1033113204 instance=ExtResource("1_b26oi")]
 
 [node name="user" parent="." unique_id=2077381032 instance=ExtResource("2_1jyap")]
 collision_layer = 3
@@ -20,9 +21,15 @@ inventory = Array[ExtResource("3_b26oi")]([null, ExtResource("4_b26oi"), null, n
 [node name="cam" parent="user" index="0" unique_id=1586713200]
 zoom = Vector2(2, 2)
 
+[node name="arm" parent="user" index="3" unique_id=1207925035]
+texture = null
+
 [node name="canvas" parent="." unique_id=1713167448 instance=ExtResource("3_4sl7s")]
 
-[node name="zombie" parent="." unique_id=1621277170 instance=ExtResource("6_c70ge")]
-position = Vector2(149, 0)
+[node name="kamikadze" parent="." unique_id=1621277170 instance=ExtResource("6_c70ge")]
+position = Vector2(124, -17)
+
+[node name="wall" parent="." unique_id=407121951 instance=ExtResource("7_1dwcq")]
+position = Vector2(141, -13)
 
 [editable path="user"]
