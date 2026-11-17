@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://n8ivfe33kbli"]
+
+[ext_resource type="Script" uid="uid://bqopnahrt4qfj" path="res://code/object.gd" id="1_0o4x8"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="3_gtjog"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yprbh"]
+size = Vector2(64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aebjg"]
+atlas = ExtResource("3_gtjog")
+
+[node name="smellter" type="CollisionShape2D" unique_id=807668424]
+shape = SubResource("RectangleShape2D_yprbh")
+script = ExtResource("1_0o4x8")
+object = 3
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=2014314217]
+position = Vector2(0, -3)
+texture = ExtResource("3_gtjog")
+region_enabled = true
+region_rect = Rect2(1760, 122, 64, 38)
+
+[node name="weapon" type="Sprite2D" parent="." unique_id=1511870199]
+position = Vector2(0, 3.0000002)
+scale = Vector2(0.923077, 0.99999994)
+texture = SubResource("AtlasTexture_aebjg")
+region_enabled = true
+region_rect = Rect2(1890, 1201, 13, 14)

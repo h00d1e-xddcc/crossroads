@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="crossroads_item" format=3 uid="uid://dyr0b627uq7l0"]
+
+[ext_resource type="Script" uid="uid://d1k3vfjk4rmcv" path="res://code/item.gd" id="1_alipj"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="2_u5e4g"]
+
+[resource]
+resource_name = "parts"
+script = ExtResource("1_alipj")
+texture = ExtResource("2_u5e4g")
+rect = Rect2(1696, 2016, 32, 32)
+type = 4
+nbt = {
+"is_explode": false
+}
+metadata/_custom_type_script = "uid://d1k3vfjk4rmcv"

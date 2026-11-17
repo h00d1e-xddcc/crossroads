@@ -3,13 +3,59 @@
 [ext_resource type="Texture2D" uid="uid://bs0qh0mcf7vng" path="res://pics/title_screen/1.png" id="1_oeexw"]
 [ext_resource type="Script" uid="uid://bmqqvsvvm65lx" path="res://code/menu.gd" id="1_pjmcm"]
 [ext_resource type="FontFile" uid="uid://quv3rt6hskca" path="res://resources/PressStart2P.ttf" id="2_f06o2"]
+[ext_resource type="Theme" uid="uid://ckcs5b60mfdt7" path="res://resources/buttons.theme" id="3_jfis0"]
 [ext_resource type="Texture2D" uid="uid://2fyaap80i34b" path="res://pics/Skins/0.png" id="3_rixcb"]
+[ext_resource type="Texture2D" uid="uid://cij0e43pp7nyv" path="res://icon.svg" id="4_3nfdx"]
 [ext_resource type="AudioStream" uid="uid://cnkujnfworp0t" path="res://audio/amb/MainTheme - MayoNinja.ogg" id="4_axi1q"]
 [ext_resource type="Script" uid="uid://ur08culqvm1o" path="res://code/trans.gd" id="5_uc3vu"]
+[ext_resource type="Texture2D" uid="uid://ckqbdgpl05sjw" path="res://pics/misc/mapIcons.png" id="5_y5qo3"]
 [ext_resource type="Theme" uid="uid://gaiaubb50xqw" path="res://resources/theme.tres" id="7_kuqlr"]
-[ext_resource type="Texture2D" uid="uid://bhijy8qa21xol" path="res://pics/MayoNinja.png" id="9_3nfdx"]
 [ext_resource type="PackedScene" uid="uid://2dl61jmg48d5" path="res://prefabs/ui/button.tscn" id="9_d7fan"]
 [ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="9_jfis0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5qo3"]
+atlas = ExtResource("5_y5qo3")
+region = Rect2(0, 0, 175, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_378qc"]
+atlas = ExtResource("9_jfis0")
+region = Rect2(740, 2021, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73aox"]
+atlas = ExtResource("9_jfis0")
+region = Rect2(548, 2020, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84sbs"]
+atlas = ExtResource("9_jfis0")
+region = Rect2(644, 2020, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21bg4"]
+atlas = ExtResource("9_jfis0")
+region = Rect2(612, 2020, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8pom"]
+atlas = ExtResource("9_jfis0")
+region = Rect2(580, 2020, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0x0nk"]
+atlas = ExtResource("9_jfis0")
+region = Rect2(516, 2020, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuqlr"]
+atlas = ExtResource("9_jfis0")
+region = Rect2(1984, 1664, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n33ga"]
+atlas = ExtResource("9_jfis0")
+region = Rect2(2016, 1632, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nfdx"]
+atlas = ExtResource("9_jfis0")
+region = Rect2(1984, 1632, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfis0"]
+atlas = ExtResource("9_jfis0")
+region = Rect2(1952, 1632, 32, 32)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f06o2"]
 content_margin_left = 4.0
@@ -44,27 +90,7 @@ bg_color = Color(0.1, 0.1, 0.1, 0.6)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mto5o"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n33ga"]
-atlas = ExtResource("9_jfis0")
-region = Rect2(2016, 1632, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3nfdx"]
-atlas = ExtResource("9_jfis0")
-region = Rect2(1984, 1632, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aq5s0"]
-atlas = ExtResource("9_3nfdx")
-region = Rect2(227, 0, 342, 450)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jfis0"]
-atlas = ExtResource("9_jfis0")
-region = Rect2(1952, 1632, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kuqlr"]
-atlas = ExtResource("9_jfis0")
-region = Rect2(1984, 1664, 32, 32)
-
-[node name="menu" type="Control" unique_id=1732594124 node_paths=PackedStringArray("buttons")]
+[node name="menu" type="Control" unique_id=1732594124]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -72,7 +98,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pjmcm")
-buttons = [NodePath("settings/audio"), NodePath("settings/ambient")]
 
 [node name="back" type="TextureRect" parent="." unique_id=9521816]
 layout_mode = 1
@@ -82,6 +107,293 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_oeexw")
+
+[node name="map" type="Control" parent="." unique_id=192619692]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="list" type="Panel" parent="map" unique_id=1738210633]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 82.0
+offset_top = 50.0
+offset_right = 462.0
+offset_bottom = -41.0
+grow_vertical = 2
+theme = ExtResource("7_kuqlr")
+
+[node name="grid" type="VBoxContainer" parent="map/list" unique_id=254400120]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="de_test" type="Button" parent="map/list/grid" unique_id=375611997]
+custom_minimum_size = Vector2(380, 80)
+custom_maximum_size = Vector2(380, 80)
+layout_mode = 2
+text = "de_test"
+icon = ExtResource("4_3nfdx")
+alignment = 0
+icon_alignment = 2
+expand_icon = true
+
+[node name="de_house" type="Button" parent="map/list/grid" unique_id=1355143625]
+custom_minimum_size = Vector2(380, 80)
+custom_maximum_size = Vector2(380, 80)
+layout_mode = 2
+text = "de_house"
+icon = SubResource("AtlasTexture_y5qo3")
+alignment = 0
+icon_alignment = 2
+
+[node name="settings" type="Panel" parent="map" unique_id=250932387]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -662.0
+offset_top = 47.0
+offset_right = -57.0
+offset_bottom = -41.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("7_kuqlr")
+
+[node name="name" type="Label" parent="map/settings" unique_id=2119839840]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 19.0
+offset_right = 60.0
+offset_bottom = 37.0
+theme_override_font_sizes/font_size = 18
+text = "> de_test"
+
+[node name="icon" type="TextureRect" parent="map/settings" unique_id=1149145138]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -144.0
+offset_top = 19.0
+offset_right = -16.0
+offset_bottom = 147.0
+grow_horizontal = 0
+texture = ExtResource("4_3nfdx")
+expand_mode = 1
+
+[node name="difficulty" type="Panel" parent="map/settings" unique_id=1029554313]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -367.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("7_kuqlr")
+
+[node name="grid" type="GridContainer" parent="map/settings/difficulty" unique_id=1105169081]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 14.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = 181.0
+grow_horizontal = 2
+columns = 6
+
+[node name="default" type="TextureRect" parent="map/settings/difficulty/grid" unique_id=1014789351]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = SubResource("AtlasTexture_378qc")
+
+[node name="input" type="LineEdit" parent="map/settings/difficulty/grid/default" unique_id=1228218761]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 19
+placeholder_text = "0-20"
+alignment = 1
+max_length = 2
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+
+[node name="kamikadze" type="TextureRect" parent="map/settings/difficulty/grid" unique_id=1159717022]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = SubResource("AtlasTexture_73aox")
+
+[node name="input" type="LineEdit" parent="map/settings/difficulty/grid/kamikadze" unique_id=165778205]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 19
+placeholder_text = "0-20"
+alignment = 1
+max_length = 2
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+
+[node name="dohodyaga" type="TextureRect" parent="map/settings/difficulty/grid" unique_id=1945450516]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = SubResource("AtlasTexture_84sbs")
+
+[node name="input" type="LineEdit" parent="map/settings/difficulty/grid/dohodyaga" unique_id=1805895530]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 19
+placeholder_text = "0-20"
+alignment = 1
+max_length = 2
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+
+[node name="spine" type="TextureRect" parent="map/settings/difficulty/grid" unique_id=2144096011]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = SubResource("AtlasTexture_21bg4")
+
+[node name="input" type="LineEdit" parent="map/settings/difficulty/grid/spine" unique_id=1629126517]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 19
+placeholder_text = "0-20"
+alignment = 1
+max_length = 2
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+
+[node name="tank" type="TextureRect" parent="map/settings/difficulty/grid" unique_id=1001991861]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = SubResource("AtlasTexture_w8pom")
+
+[node name="input" type="LineEdit" parent="map/settings/difficulty/grid/tank" unique_id=1504738474]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 19
+placeholder_text = "0-20"
+alignment = 1
+max_length = 2
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+
+[node name="spitter" type="TextureRect" parent="map/settings/difficulty/grid" unique_id=1428355315]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = SubResource("AtlasTexture_0x0nk")
+
+[node name="input" type="LineEdit" parent="map/settings/difficulty/grid/spitter" unique_id=1060926580]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 19
+placeholder_text = "0-20"
+alignment = 1
+max_length = 2
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+
+[node name=">>>" type="Button" parent="map/settings" unique_id=947286275]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -156.0
+offset_right = 95.0
+offset_bottom = -116.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = ">>>>>"
+
+[node name=">>>2" type="Button" parent="map/settings" unique_id=102745896]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -398.0
+offset_top = -321.0
+offset_right = -308.0
+offset_bottom = -281.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "<<<"
 
 [node name="connect" type="Control" parent="." unique_id=1159305485]
 visible = false
@@ -101,7 +413,7 @@ offset_left = -107.0
 offset_top = -66.0
 offset_right = -67.0
 offset_bottom = -30.0
-theme = ExtResource("7_kuqlr")
+theme = ExtResource("3_jfis0")
 theme_override_font_sizes/font_size = 28
 text = "←"
 
@@ -111,7 +423,7 @@ offset_left = -267.0
 offset_top = -66.0
 offset_right = -142.0
 offset_bottom = -30.0
-theme = ExtResource("7_kuqlr")
+theme = ExtResource("3_jfis0")
 text = "connect"
 script = ExtResource("5_uc3vu")
 
@@ -161,7 +473,7 @@ offset_left = -107.0
 offset_top = -66.0
 offset_right = -67.0
 offset_bottom = -30.0
-theme = ExtResource("7_kuqlr")
+theme = ExtResource("3_jfis0")
 theme_override_font_sizes/font_size = 28
 text = "←"
 
@@ -171,7 +483,7 @@ offset_left = -267.0
 offset_top = -66.0
 offset_right = -142.0
 offset_bottom = -30.0
-theme = ExtResource("7_kuqlr")
+theme = ExtResource("3_jfis0")
 text = "host"
 script = ExtResource("5_uc3vu")
 
@@ -215,6 +527,7 @@ text = "connected :
 "
 
 [node name="main" type="Control" parent="." unique_id=950476117]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -222,6 +535,123 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+
+[node name="based" type="Label" parent="main" unique_id=50237253]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+horizontal_alignment = 2
+script = ExtResource("5_uc3vu")
+
+[node name="crossroads" type="Label" parent="main" unique_id=1441561075]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.0
+offset_top = -23.5
+offset_right = 187.0
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -200)
+theme_override_font_sizes/font_size = 26
+text = "crossroads
+prototype edition"
+horizontal_alignment = 1
+
+[node name="github" type="Label" parent="main" unique_id=486576033]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -207.0
+offset_bottom = 55.0
+grow_horizontal = 0
+text = "crossroads
+GitHub page"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_uc3vu")
+
+[node name="github" type="Button" parent="main/github" unique_id=440362561]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_top = 47.46
+offset_right = 40.0
+offset_bottom = 127.46002
+grow_horizontal = 2
+icon = SubResource("AtlasTexture_kuqlr")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="label_og" type="Control" parent="main" unique_id=1374010311]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="links" type="Label" parent="main/label_og" unique_id=968939256]
+layout_mode = 1
+offset_left = 80.0
+offset_top = 10.0
+offset_right = 272.0
+offset_bottom = 64.0
+theme = ExtResource("3_jfis0")
+text = "Original
+Zombie Cubes
+links"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_uc3vu")
+
+[node name="buttons" type="GridContainer" parent="main/label_og" unique_id=634316211]
+layout_mode = 0
+offset_left = -37.0
+offset_top = -64.0
+offset_right = 170.0
+offset_bottom = 184.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(40, 65)
+offset_transform_visual_only = false
+
+[node name="facebook" type="Button" parent="main/label_og/buttons" unique_id=1938859168]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+icon = SubResource("AtlasTexture_n33ga")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="twitter" type="Button" parent="main/label_og/buttons" unique_id=1634025063]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+icon = SubResource("AtlasTexture_3nfdx")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="steam" type="Button" parent="main/label_og/buttons" unique_id=679353657]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+icon = SubResource("AtlasTexture_jfis0")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="vessel" type="Control" parent="main" unique_id=1164650980]
 layout_mode = 1
@@ -261,6 +691,7 @@ texture = SubResource("AtlasTexture_0vcn1")
 expand_mode = 1
 
 [node name="paper" type="Panel" parent="main/vessel" unique_id=1060633266]
+visible = false
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -292,51 +723,57 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="skin" type="Button" parent="main/vessel" unique_id=1783584712]
+visible = false
 layout_mode = 0
 offset_left = 52.0
 offset_top = 588.0
 offset_right = 242.0
 offset_bottom = 622.0
-theme = ExtResource("7_kuqlr")
+theme = ExtResource("3_jfis0")
 theme_override_font_sizes/font_size = 26
 text = " skins "
 script = ExtResource("5_uc3vu")
 
 [node name="buttons" type="Control" parent="main" unique_id=1565163205]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 0
-grow_vertical = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="array" type="VBoxContainer" parent="main/buttons" unique_id=594302843]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -237.0
-offset_top = -169.0
-offset_right = -32.0
-offset_bottom = -66.0
-grow_horizontal = 0
-grow_vertical = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.5
+offset_top = -51.5
+offset_right = 102.5
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(310, 110)
+offset_transform_visual_only = false
 
 [node name="start" type="Button" parent="main/buttons/array" unique_id=2134435813]
 layout_mode = 2
-theme = ExtResource("7_kuqlr")
+theme = ExtResource("3_jfis0")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_rixcb")
 text = "d"
 icon = SubResource("AtlasTexture_mto5o")
 script = ExtResource("5_uc3vu")
 
-[node name="host" type="Button" parent="main/buttons/array" unique_id=1378577583]
+[node name="settings" type="Button" parent="main/buttons/array" unique_id=1378577583]
 layout_mode = 2
-theme = ExtResource("7_kuqlr")
+theme = ExtResource("3_jfis0")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_rixcb")
 text = "
 "
@@ -345,186 +782,236 @@ script = ExtResource("5_uc3vu")
 
 [node name="connect" type="Button" parent="main/buttons/array" unique_id=187526713]
 layout_mode = 2
-theme = ExtResource("7_kuqlr")
+theme = ExtResource("3_jfis0")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_rixcb")
 text = "
 "
 icon = SubResource("AtlasTexture_mto5o")
 script = ExtResource("5_uc3vu")
 
-[node name="ambient" type="AudioStreamPlayer2D" parent="." unique_id=1418554188]
-stream = ExtResource("4_axi1q")
-
-[node name="based" type="Label" parent="." unique_id=50237253]
+[node name="settings" type="Control" parent="." unique_id=1665786205]
+visible = false
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -16.0
+offset_right = -192.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+
+[node name="responce" type="Control" parent="settings" unique_id=1778323016]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="cr" type="Label" parent="settings/responce" unique_id=1180424665]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -235.8335
+offset_top = 12.5
+offset_right = -23.333496
+offset_bottom = 33.333336
 grow_horizontal = 0
-grow_vertical = 0
+text = "crossroads"
+script = ExtResource("5_uc3vu")
+
+[node name="zc" type="Label" parent="settings/responce" unique_id=1054126407]
+layout_mode = 1
+offset_left = 69.166664
+offset_top = 6.6666665
+offset_right = 281.66666
+offset_bottom = 27.5
+text = "Zombie Cubes"
+script = ExtResource("5_uc3vu")
+
+[node name="og" type="Label" parent="settings/responce" unique_id=1751898625]
+layout_mode = 1
+offset_left = 9.166666
+offset_top = 41.666664
+offset_right = 489.16666
+offset_bottom = 171.66666
+text = "creator > MayoNinja\\n
+special thanks to > dermetfan\\n
+\\n
+sound effects > soundbible.com\\n
+and > freesfx.co.uk\\n
+\\n
+engine >  LibGDx\\n"
+script = ExtResource("5_uc3vu")
+
+[node name="new" type="Label" parent="settings/responce" unique_id=1505967631]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -490.83337
+offset_top = 40.83333
+offset_right = -10.833374
+offset_bottom = 170.83333
+grow_horizontal = 0
+text = "creator > me\\n
+Scene Manager > glassbrick\\n
+font > CodeMan38\\n
+engine > Godot\\n
+2D editor > Aseprite\\n"
 horizontal_alignment = 2
 script = ExtResource("5_uc3vu")
 
-[node name="crossroads" type="Label" parent="." unique_id=1441561075]
+[node name="sound" type="Control" parent="settings" unique_id=1935042203]
+visible = false
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 16.0
-grow_horizontal = 2
-offset_transform_enabled = true
-offset_transform_position = Vector2(0, 12)
-theme_override_font_sizes/font_size = 22
-text = "crossroads
-prototype edition"
-horizontal_alignment = 1
-
-[node name="label_og" type="Control" parent="." unique_id=1374010311]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="links" type="Label" parent="label_og" unique_id=968939256]
+[node name="audio" parent="settings/sound" unique_id=357613708 instance=ExtResource("9_d7fan")]
 layout_mode = 0
-offset_left = 17.0
-offset_right = 224.0
-offset_bottom = 55.0
-theme = ExtResource("7_kuqlr")
-text = "Original
-Zombie Cubes
-links"
-horizontal_alignment = 1
-vertical_alignment = 1
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 455.0
+offset_top = 152.49994
+offset_right = 549.0
+offset_bottom = 187.49994
+grow_horizontal = 1
+grow_vertical = 1
+text = "label"
+translate = true
+on_show = true
+
+[node name="ambient" parent="settings/sound" unique_id=962421068 instance=ExtResource("9_d7fan")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 455.0
+offset_top = 92.49997
+offset_right = 549.0
+offset_bottom = 127.49997
+grow_horizontal = 1
+grow_vertical = 1
+text = "label"
+translate = true
+on_show = true
+
+[node name="graphics" type="Control" parent="settings" unique_id=297102424]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="buttons" type="GridContainer" parent="settings" unique_id=638094212]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.33304
+offset_top = -150.0
+offset_right = 113.66699
+offset_bottom = 34.00003
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 257
+theme_override_constants/v_separation = 24
+
+[node name="sound" type="Button" parent="settings/buttons" unique_id=1382829310]
+layout_mode = 2
+theme = ExtResource("3_jfis0")
+theme_override_font_sizes/font_size = 28
+text = "sound"
 script = ExtResource("5_uc3vu")
 
-[node name="buttons" type="GridContainer" parent="label_og" unique_id=634316211]
-layout_mode = 0
-offset_right = 207.0
-offset_bottom = 197.0
-offset_transform_enabled = true
-offset_transform_position = Vector2(40, 65)
-offset_transform_visual_only = false
-columns = 3
-
-[node name="facebook" type="Button" parent="label_og/buttons" unique_id=1938859168]
-custom_minimum_size = Vector2(80, 80)
+[node name="graphics" type="Button" parent="settings/buttons" unique_id=844704955]
 layout_mode = 2
-icon = SubResource("AtlasTexture_n33ga")
-flat = true
-icon_alignment = 1
-expand_icon = true
+theme = ExtResource("3_jfis0")
+theme_override_font_sizes/font_size = 28
+text = "graphics"
+script = ExtResource("5_uc3vu")
 
-[node name="twitter" type="Button" parent="label_og/buttons" unique_id=1634025063]
-custom_minimum_size = Vector2(80, 80)
+[node name="control" type="Button" parent="settings/buttons" unique_id=1953827911]
 layout_mode = 2
-icon = SubResource("AtlasTexture_3nfdx")
-flat = true
-icon_alignment = 1
-expand_icon = true
+theme = ExtResource("3_jfis0")
+theme_override_font_sizes/font_size = 28
+text = "control"
+script = ExtResource("5_uc3vu")
 
-[node name="MayoNinja" type="TextureRect" parent="label_og/buttons/twitter" unique_id=1437537238]
+[node name="credit" type="Button" parent="settings/buttons" unique_id=1869202859]
+layout_mode = 2
+theme = ExtResource("3_jfis0")
+theme_override_font_sizes/font_size = 28
+text = "credit"
+script = ExtResource("5_uc3vu")
+
+[node name="back" type="Button" parent="settings" unique_id=2001526649]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -48.5
-offset_top = 5.0
-offset_right = 48.5
-offset_bottom = 110.0
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.833313
+offset_bottom = -36.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = SubResource("AtlasTexture_aq5s0")
-expand_mode = 1
-
-[node name="steam" type="Button" parent="label_og/buttons" unique_id=679353657]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-icon = SubResource("AtlasTexture_jfis0")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="github" type="Label" parent="." unique_id=486576033]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -207.0
-offset_bottom = 55.0
-grow_horizontal = 0
-text = "crossroads
-GitHub page"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme = ExtResource("3_jfis0")
+theme_override_font_sizes/font_size = 22
+text = "trans"
 script = ExtResource("5_uc3vu")
 
-[node name="github" type="Button" parent="github" unique_id=440362561]
-custom_minimum_size = Vector2(80, 80)
+[node name="settings" type="Button" parent="settings" unique_id=392673237]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-offset_left = -40.0
-offset_top = 47.46
-offset_right = 40.0
-offset_bottom = 127.46002
+anchor_bottom = 1.0
+offset_left = -102.5
+offset_top = -120.0
+offset_right = 102.5
+offset_bottom = -87.99982
 grow_horizontal = 2
-icon = SubResource("AtlasTexture_kuqlr")
-flat = true
+grow_vertical = 0
+theme = ExtResource("7_kuqlr")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_rixcb")
+text = "settings"
+icon = SubResource("AtlasTexture_mto5o")
 icon_alignment = 1
-expand_icon = true
+script = ExtResource("5_uc3vu")
 
-[node name="settings" type="Control" parent="." unique_id=1665786205]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-grow_horizontal = 0
-scale = Vector2(1.2, 1.2)
+[node name="ambient" type="AudioStreamPlayer2D" parent="." unique_id=1418554188]
+stream = ExtResource("4_axi1q")
 
-[node name="audio" parent="settings" unique_id=1120262806 instance=ExtResource("9_d7fan")]
-layout_mode = 0
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -150.0
-offset_top = 185.0
-offset_right = -56.0
-offset_bottom = 220.0
-grow_horizontal = 1
-grow_vertical = 1
-text = "label"
-translate = true
-
-[node name="ambient" parent="settings" unique_id=1202908266 instance=ExtResource("9_d7fan")]
-layout_mode = 0
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -150.0
-offset_top = 124.99999
-offset_right = -56.0
-offset_bottom = 160.0
-grow_horizontal = 1
-grow_vertical = 1
-text = "label"
-translate = true
-
+[connection signal="pressed" from="main/github/github" to="." method="_open_link" binds= ["github"]]
+[connection signal="pressed" from="main/label_og/buttons/facebook" to="." method="_open_link" binds= ["facebook"]]
+[connection signal="pressed" from="main/label_og/buttons/twitter" to="." method="_open_link" binds= ["twitter"]]
+[connection signal="pressed" from="main/label_og/buttons/steam" to="." method="_open_link" binds= ["steam"]]
 [connection signal="text_submitted" from="main/vessel/name" to="." method="_on_name_text_submitted"]
 [connection signal="pressed" from="main/vessel/skin" to="." method="_on_skin"]
 [connection signal="pressed" from="main/buttons/array/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="main/buttons/array/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="settings/buttons/sound" to="." method="_menu_open" binds= ["sound"]]
+[connection signal="pressed" from="settings/buttons/credit" to="." method="_menu_open" binds= ["credit"]]
+[connection signal="pressed" from="settings/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="settings/settings" to="." method="_on_settings_pressed"]
 
 [editable path="connect/ip"]
 [editable path="connect/port"]

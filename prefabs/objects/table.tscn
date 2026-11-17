@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bqb1bfdmel87o"]
+
+[ext_resource type="Script" uid="uid://bqopnahrt4qfj" path="res://code/object.gd" id="1_ydnyv"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="6_7pyob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_378qc"]
+size = Vector2(32, 32)
+
+[node name="table" type="CollisionShape2D" unique_id=336535072]
+shape = SubResource("RectangleShape2D_378qc")
+script = ExtResource("1_ydnyv")
+object = 8
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=294768]
+texture = ExtResource("6_7pyob")
+region_enabled = true
+region_rect = Rect2(1856, 64, 32, 32)

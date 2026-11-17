@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cf11x7iywcwnw"]
+
+[ext_resource type="Script" uid="uid://dqaqx248sr2j8" path="res://code/dynamic.gd" id="1_j6sh0"]
+[ext_resource type="Texture2D" uid="uid://vyxi5rwb1abd" path="res://pics/misc/acid.png" id="2_j6sh0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjjkl"]
+atlas = ExtResource("2_j6sh0")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5p403"]
+atlas = ExtResource("2_j6sh0")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3lq1"]
+atlas = ExtResource("2_j6sh0")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pk7mh"]
+atlas = ExtResource("2_j6sh0")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qblah"]
+atlas = ExtResource("2_j6sh0")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fg51"]
+atlas = ExtResource("2_j6sh0")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j6sh0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjjkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5p403")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3lq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pk7mh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qblah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fg51")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_378qc"]
+size = Vector2(120, 120)
+
+[node name="acid" type="Area2D" unique_id=1105752142 groups=["explode"]]
+collision_layer = 16
+collision_mask = 22
+script = ExtResource("1_j6sh0")
+nbt = {
+&"damage": 1,
+&"is_acid": true,
+&"is_enabled": true,
+&"is_explode": false,
+&"is_spawner": false,
+&"time": 13.0
+}
+hp = 99999.0
+mhp = 99999.0
+move = 0.0
+entity = 8
+
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=1805158161]
+z_index = -3
+scale = Vector2(1.9, 1.9)
+sprite_frames = SubResource("SpriteFrames_j6sh0")
+speed_scale = 1.65
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=1600745305]
+shape = SubResource("RectangleShape2D_378qc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

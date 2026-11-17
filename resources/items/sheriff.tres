@@ -13,13 +13,15 @@ nbt = {
 "bullets": 0,
 "cooldown": 0.057,
 "damage": 1.0,
+"drop_shell": false,
+"durability": 3,
 "lifetime": 4.2,
-"mbullets": 7,
+"mbullets": 8,
 "per_bullet": true,
 "reload": 0.35,
 "shot": 1,
 "speed": 400,
-"spread": 0.21,
+"spread": 0.18,
 "value": 1400
 }
 metadata/_custom_type_script = "uid://d1k3vfjk4rmcv"

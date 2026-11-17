@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dslny1vbdp4m1"]
+
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="1_0tjnj"]
+[ext_resource type="Script" uid="uid://bqopnahrt4qfj" path="res://code/object.gd" id="1_emb8e"]
+[ext_resource type="Resource" uid="uid://obo5mp2ug66i" path="res://resources/items/gas.tres" id="2_oq5u7"]
+[ext_resource type="Resource" uid="uid://3oflc5tkoxpu" path="res://resources/items/tar.tres" id="3_gn1e7"]
+[ext_resource type="Resource" uid="uid://tw7hodcm0c0b" path="res://resources/items/scrap.tres" id="4_gqpnd"]
+[ext_resource type="Resource" uid="uid://dyr0b627uq7l0" path="res://resources/items/parts.tres" id="5_xm3lb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_378qc"]
+size = Vector2(32, 32)
+
+[node name="carton" type="CollisionShape2D" unique_id=336535072]
+shape = SubResource("RectangleShape2D_378qc")
+script = ExtResource("1_emb8e")
+object = 7
+nbt = {
+0: ExtResource("2_oq5u7"),
+1: ExtResource("3_gn1e7"),
+2: ExtResource("4_gqpnd"),
+3: ExtResource("5_xm3lb"),
+"is_open": false
+}
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=294768]
+texture = ExtResource("1_0tjnj")
+region_enabled = true
+region_rect = Rect2(1936, 240, 32, 32)

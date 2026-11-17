@@ -16,7 +16,7 @@ func load_classic() :
 	bullets = $ui_classic/bullets
 	escape = $ui_classic/pause
 
-	arc.canvas.slots_input_redraw()
+	#arc.canvas.slots_input_redraw()
 	arc.canvas.weapon.texture.region = arc.get_texture("")
 	arc.canvas.bullets.text = ""
 	arc.canvas.escape.visible = false
@@ -33,6 +33,8 @@ func redraw() :
 	stats.text = str(arc.user.points)
 	slots_redraw()
 	weapon_relabel(arc.user.item)
+	if arc.user.item != null : weapon_redraw(arc.user.item.rect)
+	else : weapon_redraw(arc.get_texture(""))
 
 func slots_redraw(value : int = -1) :
 	if arc.is_classic : return
@@ -59,10 +61,14 @@ func weapon_redraw(rect : Rect2i) :
 	weapon.texture.region = rect
 
 func weapon_relabel(item : crossroads_item) :
-	if item != null : bullets.text = str(item.nbt["bullets"]) + "/" + str(item.nbt["mbullets"]) as String
+	if item != null : 
+		var bullets_current = item.nbt.get("bullets", null)
+		if bullets_current != null :
+			bullets.text = str(bullets_current) + "/" + str(item.nbt["mbullets"])
+		else : bullets.text = ""
 	else : bullets.text = ""
 
-func pts_calculate(value : int = 0) :
+func pts_calculate(value : int = 0, operator = "-") :
 	#print(value)
 	if value == 0 : stats.text = str(arc.user.points)
-	else : stats.text = str(arc.user.points) + " - " + str(value)
+	else : stats.text = str(arc.user.points) + " " + operator + " " + str(value)

@@ -21,3 +21,4 @@ nbt = {
 [node name="sprite" type="Sprite2D" parent="." unique_id=2080858334]
 texture = SubResource("AtlasTexture_jlp4h")
 region_enabled = true
+region_rect = Rect2(1280, 1824, 64, 64)

@@ -1,6 +1,12 @@
 extends Node2D
 class_name crossroads_root
 
+@export var data : Dictionary = {
+	"ver" = "crossroads v26.0.-1\n $h for commands",
+	"points" = 0,
+	"map" = null,
+	"difficulty" = null
+	}
 @onready var atlas : Texture = preload("res://pics/tiles.ase")
 @onready var user : crossroads_user
 @onready var canvas : crossroads_canvas
@@ -12,6 +18,16 @@ class_name crossroads_root
 @export var difficulty : Array[int]
 signal retranslate
 
+@export var entities = {
+	"default" : preload("res://prefabs/entity/default.tscn"),
+	"kamikadze" : preload("res://prefabs/entity/kamikadze.tscn"),
+	"explode" : preload("res://prefabs/entity/explode.tscn"),
+	"acid" : preload("res://prefabs/entity/acid.tscn"),
+	"spitter" : preload("res://prefabs/entity/spitter.tscn"),
+	"bullet" : preload("res://prefabs/entity/bullet.tscn"),
+	"spawner" : preload("res://prefabs/entity/spawner.tscn"),
+}
+
 func get_item(item_name : String = "") -> crossroads_item :
 	var loaded_item = load("res://resources/items/" + item_name + ".tres")
 	if loaded_item != null : 
@@ -19,10 +35,10 @@ func get_item(item_name : String = "") -> crossroads_item :
 		item.nbt["name"] = loaded_item.resource_name
 		return item
 	else : 
-		ARC_CONSOLE.print_output("BAD REQUEST ITEM  -> `" + item_name + "`")
+		console_print("BAD REQUEST ITEM  -> `" + item_name + "`")
 		return null
 
-func get_texture(sprite_name : String) -> Rect2 :
+func get_texture(sprite_name : String = "") -> Rect2 :
 	#print("get sprite -> " + sprite_name)
 	match sprite_name :
 		"hand0" : return Rect2(1184,2016,32,32)
@@ -31,14 +47,20 @@ func get_texture(sprite_name : String) -> Rect2 :
 		"magazine1" : return Rect2(1816,1936, 11, 16)
 		"shell" : return Rect2(1791,1939, 6, 4)
 		"gas" : return Rect2(1696,1920,32,32)
-		"zombie0" : return Rect2(736, 2016, 32, 32)
-		"zombie1" : return Rect2(736, 1984, 32, 32)
-		"zombie2" : return Rect2(736, 1952, 32, 32)
-		"zombie3" : return Rect2(736, 1920, 32, 32)
+		"tar" : return Rect2(1664,1920,32,32)
+		"tar0" : return Rect2(1280, 1824,64,64)
+		"scrap" : return Rect2(1664,2016,32,32)
+		"parts" : return Rect2(1696,2016,32,32)
+		"default" : return Rect2(736, 2016, 32, 32)
+		"default1" : return Rect2(736, 1984, 32, 32)
+		"default2" : return Rect2(736, 1952, 32, 32)
+		"default3" : return Rect2(736, 1920, 32, 32)
 		"mom" : return Rect2(736, 1920 - 32, 32, 32)
-		"null", "" : return Rect2(1184,32,32,32)
+		"carton" : return Rect2(1936,240,32,32)
+		"carton_open" : return Rect2(1992,233,48,47)
+		"null", "", null : return Rect2(1184,32,32,32)
 		_ : 
-			ARC_CONSOLE.print_output("BAD REQUEST IMAGE -> `" + sprite_name + "`")
+			console_print("BAD REQUEST IMAGE -> `" + sprite_name + "`")
 			return Rect2(1184,32,32,32)
 
 func get_sprite_under_mouse() -> Sprite2D:
@@ -97,6 +119,7 @@ func one_shot_play(d : Dictionary = {"path" = "", "type" = "2d","volume" = 0, "d
 func settings_load() -> bool : 
 	if FileAccess.file_exists("user://crossroads.tres") : 
 		arc.settings = ResourceLoader.load("user://crossroads.tres") as crossroads_settings
+		#ARC_CONSOLE.last_commands = arc.settings.data.get("history", null)
 		if arc.settings.data.get("fullscreen", false) : get_window().mode = Window.MODE_FULLSCREEN
 		if arc.settings.data.get("vsync", false) : DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
 		else : DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
@@ -135,11 +158,11 @@ func decal_clear() :
 	decals_write = -1
 	arc.decals.resize(arc.settings.data["decal"])
 
-func spawn(fl : Dictionary = {"summon" = "default",pos = Vector2.ZERO}) :
-	var loaded_entity = load("res://prefabs/entity/" + fl["summon"] + ".tscn").instantiate()
-	if loaded_entity != null :
-		loaded_entity.call_deferred("add_child", get_tree().root)
-		loaded_entity.set_deferred("global_position", fl["pos"])
+func summon_entity(summoning : String, pos : Vector2 = Vector2.ZERO):
+	if arc.entities.has(summoning) :
+		var entity = arc.entities[summoning].instantiate()
+		get_tree().current_scene.add_child(entity)
+		entity.global_position = pos
 
-func console_print(data) : 
-	get_node("/root/ARC_CONSOLE").print_output(data)
+func console_print(_data) : 
+	get_node("/root/ARC_CONSOLE").print_output(_data)

@@ -33,7 +33,7 @@ properties/2/path = NodePath(".:scale")
 properties/2/spawn = true
 properties/2/replication_mode = 1
 
-[node name="user_blank" type="CharacterBody2D" unique_id=2077381032 node_paths=PackedStringArray("light", "area", "fire")]
+[node name="user" type="CharacterBody2D" unique_id=2077381032 node_paths=PackedStringArray("light", "area", "fire") groups=["user"]]
 script = ExtResource("1_qhsqr")
 light = NodePath("fire/light")
 area = NodePath("ShapeCast2D")

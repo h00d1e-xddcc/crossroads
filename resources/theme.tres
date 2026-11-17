@@ -11,14 +11,31 @@ bg_color = Color(0.4862745, 0.4862745, 0.4862745, 1)
 bg_color = Color(0.1, 0.1, 0.1, 0.6)
 border_color = Color(0, 0, 0, 0.6)
 corner_detail = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_886mr"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tekt2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b751m"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
 
 [resource]
 Button/fonts/font = ExtResource("1_d4nwg")
 Button/styles/focus = SubResource("StyleBoxFlat_d4nwg")
 Button/styles/hover = SubResource("StyleBoxFlat_7ct1h")
 Button/styles/normal = SubResource("StyleBoxFlat_jfis0")
+Button/styles/pressed = SubResource("StyleBoxFlat_886mr")
 LineEdit/styles/focus = SubResource("StyleBoxFlat_tekt2")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_jfis0")
 LineEdit/styles/read_only = SubResource("StyleBoxFlat_jfis0")
+Panel/styles/panel = SubResource("StyleBoxFlat_b751m")

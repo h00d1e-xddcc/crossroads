@@ -42,13 +42,15 @@ func pof() :
 func _on_body_entered(body: Node2D) -> void:
 	match body.name :
 		"hole", "decor", "projectile", "user" : return
-	durability -= 1
+	durability -= 2
 	if durability <= 0 : pof()
 
 func _on_area_entered(area: Area2D) -> void:
 	#print(area.name)
+		#print(1)
 	if area.has_method("take_damage"):
-		print(1)
 		area.take_damage(damage)
 		durability -= 1
 		if durability <= 0 : pof()
+	if area.get_script() == crossroads_object :
+		var item : crossroads_item = area.nbt.get()

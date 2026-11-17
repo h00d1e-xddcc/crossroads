@@ -37,7 +37,14 @@ func _physics_process(_delta: float) -> void:
 
 	look_at(get_global_mouse_position())
 	INPUT(_delta)
-	if nearest_collision != null : arc.canvas.pts_calculate(nearest_collision.nbt["points"])
+	if nearest_collision != null :
+		match nearest_collision.object :
+			nearest_collision.type_object.SMELTER : 
+				if arc.user.item == null : return
+				arc.canvas.pts_calculate(item.nbt.get("value", 0) * .75, "+")
+			nearest_collision.type_object.CARTON : pass
+			_ :
+				arc.canvas.pts_calculate(nearest_collision.nbt.get("points", 100))
 	else : arc.canvas.pts_calculate(0)
 
 	nearest_collision = null
@@ -65,6 +72,7 @@ func inventory_add(to_add : crossroads_item) -> bool :
 	if is_reloading : return false
 	var index = inventory.find(null)
 	if index == -1:
+		arc.item_create(to_add, global_position)
 		return false
 	inventory[index] = to_add
 	#print(index)
@@ -80,7 +88,7 @@ func item_hide() :
 
 func item_equip(value : int) :
 	if arc.is_classic and value > 1 : return
-	if is_reloading : return
+	if is_reloading or arc.user.inventory[value] == null : return
 	item = inventory[value]
 	item_selected = value
 	if item == null : 
@@ -105,13 +113,13 @@ func item_drop() :
 	item = null
 	item_selected = -1
 	prefab.global_position = Vector2i(global_position)
-	prefab.redraw()
 	arc.canvas.weapon.texture.region = arc.get_texture("")
 	arc.canvas.redraw()
 	arc.one_shot_play({"path" = "user/drop", "type" = "2d", "position" = arc.user.global_position})
+	prefab.redraw()
 
 func item_reload() :
-	if item == null or is_reloading : return
+	if item == null or is_reloading or item.type == item.type_item.CRAFT : return
 	is_reloading = true
 	match item.resource_name :
 		"nature" :
@@ -184,26 +192,29 @@ func INPUT( _delta) :
 
 func attack_action() :
 	if item == null or is_reloading or is_can_shoot == false : return
-	var bullets = item.nbt.get("bullets", -1)
-	if bullets <= 0 : 
-		match item.resource_name :
-			"sheriff" : arc.one_shot_play({"path" = "user/magnum_empty", "position" = global_position, "format" = ".wav"})
-			"1911", _ : arc.one_shot_play({"path" = "user/empty", "position" = global_position})
-		return
-	is_can_shoot = false
-	match item.resource_name :
-		"sheriff" : arc.one_shot_play({"path" = "user/magnum", "position" = global_position, "format" = ".wav"})
-		"nature" : arc.one_shot_play({"path" = "user/gun_shot", "position" = global_position})
-		"bucky" : arc.one_shot_play({"path" = "user/bucky", "position" = global_position})
-		"1911", _ : arc.one_shot_play({"path" = "user/gun", "position" = global_position})
-	item.nbt["bullets"] -= 1
-	shoot()
-	arc.canvas.weapon_relabel(item)
-	match item.queue :
-		item.type_queue.SINGLE, item.type_queue.AUTO, item.type_queue.NONE : await get_tree().create_timer(item.nbt.get("cooldown", 1)).timeout
-		#item.type_queue.SPAM : 
-			#if
-	is_can_shoot = true
+	match item.type :
+		item.type_item.CRAFT : pass
+		_ :
+			var bullets = item.nbt.get("bullets", -1)
+			if bullets <= 0 : 
+				match item.resource_name :
+					"sheriff" : arc.one_shot_play({"path" = "user/magnum_empty", "position" = global_position, "format" = ".wav"})
+					"1911", _ : arc.one_shot_play({"path" = "user/empty", "position" = global_position})
+				return
+			is_can_shoot = false
+			match item.resource_name :
+				"sheriff" : arc.one_shot_play({"path" = "user/magnum", "position" = global_position, "format" = ".wav"})
+				"nature" : arc.one_shot_play({"path" = "user/gun_shot", "position" = global_position})
+				"bucky" : arc.one_shot_play({"path" = "user/bucky", "position" = global_position})
+				"1911", _ : arc.one_shot_play({"path" = "user/gun", "position" = global_position})
+			item.nbt["bullets"] -= 1
+			shoot()
+			arc.canvas.weapon_relabel(item)
+			match item.queue :
+				item.type_queue.SINGLE, item.type_queue.AUTO, item.type_queue.NONE : await get_tree().create_timer(item.nbt.get("cooldown", 1)).timeout
+				#item.type_queue.SPAM : 
+					#if
+			is_can_shoot = true
 
 func interact_object() :
 	var space_state = get_world_2d().direct_space_state
@@ -240,24 +251,26 @@ func shoot() :
 		bullet.speed = item.nbt.get("speed", 10)
 		bullet.damage = item.nbt.get("damage", 1.0)
 		bullet.lifetime = item.nbt.get("lifetime", 10)
+		bullet.durability = item.nbt.get("durability", 0)
 		bullet.global_position = fire.global_position
 		bullet.direction = Vector2(get_global_mouse_position() - global_position).normalized()
 		bullet.direction.x += randf_range(-item.nbt["spread"], item.nbt["spread"])
 		bullet.direction.y += randf_range(-item.nbt["spread"], item.nbt["spread"])
 		bullet.direction = bullet.direction.normalized()
 	show_light(.1)
-	match item.resource_name :
-		"bucky" : 
+	if item.nbt.get("drop_shell", false) :
 			await get_tree().create_timer(.12).timeout
 			arc.one_shot_play({"path" = "user/shell_eject", "position" = global_position})
 			arc.decal_create("shell", global_position, 0)
-		"1911" : arc.decal_create("bullet", global_position, 0)
+	if item.nbt.get("drop_bullet", false) : arc.decal_create("bullet", global_position, 0)
 
 func damage(value : int = 0) : 
 	if iddqd : return
-	arc.canvas.hslider.value += value * 10
-	if value > 0 : arc.one_shot_play({"position" = global_position, "path" ="user/power_up"})
+	hp -= value
+	arc.canvas.hslider.value = hp * 30
+	if !value > 0 : arc.one_shot_play({"position" = global_position, "path" ="user/power_up"})
 	else : arc.one_shot_play({"position" = global_position, "path" ="user/bite"})
 	if hp <= 0 : print("die")
+	elif  hp > 3 : hp = 3
 
 #endregion

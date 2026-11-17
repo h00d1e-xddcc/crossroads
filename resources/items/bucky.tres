@@ -12,7 +12,8 @@ type = 2
 nbt = {
 "bullets": 0,
 "cooldown": 1.1,
-"damage": 1.7,
+"damage": 0.4,
+"drop_shell": true,
 "lifetime": 4.2,
 "mbullets": 5,
 "per_bullet": true,

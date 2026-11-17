@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="crossroads_item" format=3 uid="uid://3oflc5tkoxpu"]
+
+[ext_resource type="Script" uid="uid://d1k3vfjk4rmcv" path="res://code/item.gd" id="1_44kj4"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="2_ip2l2"]
+
+[resource]
+resource_name = "tar"
+script = ExtResource("1_44kj4")
+texture = ExtResource("2_ip2l2")
+rect = Rect2(1664, 1920, 32, 32)
+type = 4
+nbt = {
+"is_explode": false,
+"is_tar": true
+}
+metadata/_custom_type_script = "uid://d1k3vfjk4rmcv"

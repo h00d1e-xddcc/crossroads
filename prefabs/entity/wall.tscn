@@ -10,17 +10,20 @@ size = Vector2(32, 32)
 atlas = ExtResource("2_rl3nk")
 
 [node name="wall" type="Area2D" unique_id=407121951 groups=["explode"]]
-collision_layer = 15
-collision_mask = 15
+collision_layer = 31
+collision_mask = 0
 script = ExtResource("1_bt0ry")
-entity = 2
 
 [node name="static" type="StaticBody2D" parent="." unique_id=1012955503 groups=["explode"]]
+collision_layer = 23
+collision_mask = 0
 
-[node name="collision" type="CollisionShape2D" parent="static" unique_id=1023091514]
+[node name="collision" type="CollisionShape2D" parent="static" unique_id=1023091514 groups=["explode"]]
 shape = SubResource("RectangleShape2D_u0ayl")
 
-[node name="sprite" type="Sprite2D" parent="." unique_id=421220426]
+[node name="sprite" type="Sprite2D" parent="." unique_id=421220426 groups=["explode"]]
 texture = SubResource("AtlasTexture_ft3ny")
 region_enabled = true
-region_rect = Rect2(1825, 64, 31, 32)
+region_rect = Rect2(1824, 64, 32, 32)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

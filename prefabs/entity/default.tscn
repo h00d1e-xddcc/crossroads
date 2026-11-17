@@ -13,6 +13,14 @@ atlas = ExtResource("2_ft3ny")
 collision_layer = 15
 collision_mask = 15
 script = ExtResource("1_u0ayl")
+nbt = {
+&"damage": 1,
+&"is_acid": false,
+&"is_enabled": true,
+&"is_explode": false,
+&"is_spawner": false,
+&"time": 0.7
+}
 agent = NodePath("navi")
 entity = 4
 
@@ -21,8 +29,12 @@ position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_u0ayl")
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=421220426]
+z_index = 4
 texture = SubResource("AtlasTexture_ft3ny")
 region_enabled = true
 region_rect = Rect2(736, 2016, 32, 32)
 
 [node name="navi" type="NavigationAgent2D" parent="." unique_id=1422094619]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

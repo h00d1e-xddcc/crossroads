@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://xvx5d2nse2xv"]
+
+[ext_resource type="Script" uid="uid://dqaqx248sr2j8" path="res://code/dynamic.gd" id="1_h7vjh"]
+[ext_resource type="Texture2D" uid="uid://cafy5y1uxb6tw" path="res://pics/tiles.ase" id="2_gsgi1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ayl"]
+size = Vector2(27, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft3ny"]
+atlas = ExtResource("2_gsgi1")
+
+[node name="spitter" type="Area2D" unique_id=407121951 node_paths=PackedStringArray("agent")]
+collision_layer = 15
+collision_mask = 15
+script = ExtResource("1_h7vjh")
+nbt = {
+&"damage": 0,
+&"has_acid": true,
+&"is_acid": false,
+&"is_enabled": true,
+&"is_explode": false,
+&"is_spawner": false,
+&"time": 0.7
+}
+agent = NodePath("navi")
+entity = 9
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=1023091514]
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_u0ayl")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=421220426]
+z_index = 4
+texture = SubResource("AtlasTexture_ft3ny")
+region_enabled = true
+region_rect = Rect2(512, 2016, 32, 32)
+
+[node name="navi" type="NavigationAgent2D" parent="." unique_id=1422094619]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://d1k3vfjk4rmcv" path="res://code/item.gd" id="3_b26oi"]
 [ext_resource type="Resource" uid="uid://bpiuhjpx1n4kh" path="res://resources/items/1911.tres" id="4_b26oi"]
 [ext_resource type="PackedScene" uid="uid://dghu7utf6hok1" path="res://prefabs/entity/kamikadze.tscn" id="6_c70ge"]
-[ext_resource type="PackedScene" uid="uid://cam7l4e2uowio" path="res://prefabs/entity/wall.tscn" id="7_1dwcq"]
 
 [node name="main" type="Node2D" unique_id=1024907961]
 
@@ -27,9 +26,6 @@ texture = null
 [node name="canvas" parent="." unique_id=1713167448 instance=ExtResource("3_4sl7s")]
 
 [node name="kamikadze" parent="." unique_id=1621277170 instance=ExtResource("6_c70ge")]
-position = Vector2(124, -17)
-
-[node name="wall" parent="." unique_id=407121951 instance=ExtResource("7_1dwcq")]
-position = Vector2(141, -13)
+position = Vector2(-286, -146)
 
 [editable path="user"]

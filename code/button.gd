@@ -3,6 +3,12 @@ class_name crossroads_button
 
 @export var label : Label
 @export var translate : bool
+@export var key : bool
+@export var on_show : bool
+
+func  _ready() -> void:
+	if on_show :
+		connect("visibility_changed", redraw)
 
 func redraw() -> void:
 	arc.retranslate.connect(redraw)
